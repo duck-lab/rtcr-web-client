@@ -8,10 +8,10 @@ export default class Channel extends Component {
 		const { setChannel, channel } = this.props;
 		setChannel(channel);
 	}
-	render() {
-		const { channel } = this.props;
+	render({channel, activeChannel}) {
+		const active = channel === activeChannel ? 'active' : '';
 		return (
-			<li>
+			<li class={active}>
 				<a onClick={this.onClick.bind(this)}>{channel.name}</a>
 			</li>
 		);

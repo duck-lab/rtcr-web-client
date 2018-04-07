@@ -1,7 +1,8 @@
 import { h, Component } from 'preact';
 import linkState from 'linkstate';
 import { PropTypes } from 'preact-compat';
-// import style from './style';
+
+import style from './style';
 
 export default class NewForm extends Component {
 	onSubmit = (e) => {
@@ -11,7 +12,7 @@ export default class NewForm extends Component {
 	}
 	render({}, { newChannelName }) {
 		return (
-			<form onSubmit={this.onSubmit}>
+			<form class={style.newform} onSubmit={this.onSubmit}>
 				<input type="text" value={newChannelName} onInput={linkState(this, 'newChannelName')} />
 			</form>
 		);

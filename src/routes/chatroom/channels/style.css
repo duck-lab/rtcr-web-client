@@ -1,0 +1,20 @@
+.channels{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 50vh;
+  background: burlywood;
+}
+
+.listGroup {
+  background: azure;
+}
+
+.list {
+  background: brown;
+}
+
+.newform {
+  background: cadetblue
+}

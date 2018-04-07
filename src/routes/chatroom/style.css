@@ -1,5 +1,17 @@
 .chatroom {
-	padding: 56px 20px;
-	min-height: 100%;
-	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.side {
+	flex-basis: 20%;
+}
+
+.message-container{
+	flex-basis: 80%;
+	margin-bottom: 0;
+	height: 100%;
 }

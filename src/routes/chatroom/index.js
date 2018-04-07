@@ -21,16 +21,18 @@ export default class Chatroom extends Component {
 	}
 	setChannel = (activeChannel) => {
 		this.setState({ activeChannel })
+		console.log('>>> active channel', this.state.activeChannel)
 		// TODO: Send notify to server
 	}
 
-	render({ }, { channels }) {
+	render({ }, { channels, activeChannel }) {
 		return (
 			<div class={style.chatroom}>
 				<Channels
 					channels={channels}
 					addChannel={this.addChannel}
 					setChannel={this.setChannel}
+					activeChannel={activeChannel}
 				/>
 			</div>
 		);

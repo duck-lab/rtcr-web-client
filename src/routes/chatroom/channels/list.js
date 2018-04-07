@@ -1,14 +1,19 @@
 import { h, Component } from 'preact';
 import Channel from './channel'
 import { PropTypes } from 'preact-compat';
-// import style from './style';
+
+import style from './style';
 
 export default class List extends Component {
-	render({ channels, setChannel }) {
+	render({ channels, setChannel, activeChannel }) {
 		return (
-      <ul>{
+      <ul class={style.list}>{
         channels.map(channel => {
-          return <Channel channel={channel} setChannel={setChannel} />
+          return <Channel
+            channel={channel}
+            setChannel={setChannel}
+            activeChannel={activeChannel}
+          />
         })
       }</ul>
       
